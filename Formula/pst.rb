@@ -1,25 +1,25 @@
 class Pst < Formula
   desc "Upload files and pastes to multiple sharing services with automatic fallback"
   homepage "https://github.com/jnylen/pst"
-  version "0.2.0"
+  version "0.3.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/jnylen/pst/releases/download/v0.2.0/pst-aarch64-apple-darwin.tar.xz"
-      sha256 "6d57389dd71c15f0aeb04d2847b72d36e0512b43d1e292f3877e4fa98cf5b6f9"
+      url "https://github.com/jnylen/pst/releases/download/v0.3.0/pst-aarch64-apple-darwin.tar.xz"
+      sha256 "3c5ebfad2844f5d4084508e81b575c5728bc278f2309c7a2a3455f2cf40bc08d"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/jnylen/pst/releases/download/v0.2.0/pst-x86_64-apple-darwin.tar.xz"
-      sha256 "1a935c1613160a95a9b0d92044240f121a1a020dcf6b14910c4faa1a7d9f0198"
+      url "https://github.com/jnylen/pst/releases/download/v0.3.0/pst-x86_64-apple-darwin.tar.xz"
+      sha256 "07697c008c79e9fc2fd7d93ad361224a2a58effc1fa26b90446d10c3de3d0b39"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/jnylen/pst/releases/download/v0.2.0/pst-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "72e01277ac1c861af2554639745d43fe53a7955e34289c14134904fe6977a2ae"
+      url "https://github.com/jnylen/pst/releases/download/v0.3.0/pst-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "d813b40e9a081686d9db51acd326a0b64a6618aa011343816f76fbb9454ccf9e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/jnylen/pst/releases/download/v0.2.0/pst-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "bf73afa6a528ee7f33d74ffefb3edf30bacc5bc0cdc19c5b2fda231710c55f6e"
+      url "https://github.com/jnylen/pst/releases/download/v0.3.0/pst-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "5c789420a55c52b13c962875767493ea1736f8cbe2b8193da75b7b445317017f"
     end
   end
 
