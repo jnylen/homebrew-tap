@@ -1,25 +1,25 @@
 class Iptop < Formula
   desc "Look up IP addresses or display current ip"
   homepage "https://github.com/jnylen/iptop"
-  version "0.1.0"
+  version "0.1.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/jnylen/iptop/releases/download/v0.1.0/iptop-aarch64-apple-darwin.tar.xz"
-      sha256 "dd2280255a18309f3944eba753b99bb1005b871ffd3bbe6ed99d5dd99339df92"
+      url "https://github.com/jnylen/iptop/releases/download/v0.1.1/iptop-aarch64-apple-darwin.tar.xz"
+      sha256 "06701f1a18ee378a1f099603d1feb898455eda863be6963bf00d920d1c2603db"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/jnylen/iptop/releases/download/v0.1.0/iptop-x86_64-apple-darwin.tar.xz"
-      sha256 "31a7419146db49baa037251445ce023a3b1b82199c3b07e97449434c53db532f"
+      url "https://github.com/jnylen/iptop/releases/download/v0.1.1/iptop-x86_64-apple-darwin.tar.xz"
+      sha256 "43dc751ac151e65b5b242c9cfbc6d48231cd7e1dbebba0214608b01a5131da3e"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/jnylen/iptop/releases/download/v0.1.0/iptop-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "629387feef19cdc38aa581e5e303ea6685d6c32d6dbe2b2ce59fe0a99a5b4cdc"
+      url "https://github.com/jnylen/iptop/releases/download/v0.1.1/iptop-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "fccb8ff199f13d249f500b2329832041addefb3d41815a3b4d32fd27d56b949b"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/jnylen/iptop/releases/download/v0.1.0/iptop-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "5724c2fb7a012b8896fc301b08b702fa8788a681beeb4638c0d32e6b3ace0e20"
+      url "https://github.com/jnylen/iptop/releases/download/v0.1.1/iptop-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "96ab7c1394e5e9778c5123f193f66b723781de469f46e4c2c4831f6053870b03"
     end
   end
 
