@@ -1,25 +1,25 @@
 class Pst < Formula
   desc "Upload files and pastes to multiple sharing services with automatic fallback"
   homepage "https://github.com/jnylen/pst"
-  version "0.5.0"
+  version "0.6.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/jnylen/pst/releases/download/v0.5.0/pst-aarch64-apple-darwin.tar.xz"
-      sha256 "75d9ef7ee06f3b0427a8a6fa9da32fa6c2aa5421cf33635f69d6a6da13a88b8a"
+      url "https://github.com/jnylen/pst/releases/download/v0.6.1/pst-aarch64-apple-darwin.tar.xz"
+      sha256 "7fd2799441e0f40a86abfc9278e2b7c0b66db532b4ece4a6acbed26a19d5f29e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/jnylen/pst/releases/download/v0.5.0/pst-x86_64-apple-darwin.tar.xz"
-      sha256 "b78427b1243d72fb626afa81530c8a637a24ac71d472ae4c47a1b59173106073"
+      url "https://github.com/jnylen/pst/releases/download/v0.6.1/pst-x86_64-apple-darwin.tar.xz"
+      sha256 "bb722123acb2a28e04b297c90555b7e77de023c47f754f1f4bd42feba83836d5"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/jnylen/pst/releases/download/v0.5.0/pst-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "aed3d2e22b294bf2cae65240e3b486638b71f25c4083aef997b08608308c7eca"
+      url "https://github.com/jnylen/pst/releases/download/v0.6.1/pst-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "49524808d44557f581c3dd7bdeed7f18155a12c16417e53090d502e3873ea58c"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/jnylen/pst/releases/download/v0.5.0/pst-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "e79fab5dc71ee6199cf1126549951acd318cb236228bcb721c9170e11d379d5f"
+      url "https://github.com/jnylen/pst/releases/download/v0.6.1/pst-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "6003da34f1a7db3a2b3a608ad08fa52ef3a896c5aab793983ecf66c97ada40c8"
     end
   end
 
@@ -47,10 +47,18 @@ class Pst < Formula
   end
 
   def install
-    bin.install "pst" if OS.mac? && Hardware::CPU.arm?
-    bin.install "pst" if OS.mac? && Hardware::CPU.intel?
-    bin.install "pst" if OS.linux? && Hardware::CPU.arm?
-    bin.install "pst" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "pst"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "pst"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "pst"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "pst"
+    end
 
     install_binary_aliases!
 
